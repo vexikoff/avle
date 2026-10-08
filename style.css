@@ -1,0 +1,133 @@
+/* vexikoff */
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    color: black;
+    overflow: hidden;
+    font-family: "Google Sans Flex", sans-serif;
+}
+
+.logoh {
+    height: 32px;
+    cursor: pointer;
+}
+
+.header {
+    width: 1080px;
+    padding-left: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 8px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 3;
+    overflow: hidden;
+    position: sticky; 
+}
+
+.header::before {
+    content: "";
+    width: 1280px;
+    height: 96px;
+    backdrop-filter: blur(24px);
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.headercont {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.premain {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+.main {
+    width: 1280px;
+    min-height: 100vh;
+}
+
+.main1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    perspective: 64px;
+}
+
+.rows {
+    display: flex;
+    flex-direction: column;
+    font-family: "Google Sans Flex", sans-serif;
+    justify-content: center;
+    perspective: 64px;
+}
+
+.rows * {
+    padding: 0;
+    margin: 0;
+}
+
+.contact {
+    height: 32px;
+    cursor: pointer;
+    background-color: #FFC800;
+    color: black;
+    text-decoration: none;
+    line-height: 147.5%;
+    width: 100%;
+    font-family: "Google Sans Flex", sans-serif;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 6px;
+    margin-top: 12px;
+    transition: cubic-bezier(.04,.18,.32,.9) 0.2s all;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1, p {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 12px;
+}
+
+@media (max-width: 1280px) {
+    .header {
+        width: 100%;
+        border-radius: 12px;
+        margin-right: 12px;
+        margin-left: 12px;
+        margin-top: 12px;
+    }
+    .main {
+        width: 100%;
+    }
+}
